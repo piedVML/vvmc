@@ -1,0 +1,28 @@
+$ let clubs = component.getClubs();
+
+style {
+	th {
+		text-align: left;
+		border: solid 1px;
+	}
+	
+	td {
+		min-width: 5em;
+		border: solid 1px;
+	}
+	
+	table {
+		border: solid 1px;
+	}
+}
+
+<table>
+	<th>Nom</th>
+	<th>Coeff</th>
+	<for(club in clubs)>
+		<tr on-click('onClubClick',club)>
+			<td>${club.name}</td>
+			<td>${club.totalCoeff}</td>
+		</tr>
+	</for>
+</table>

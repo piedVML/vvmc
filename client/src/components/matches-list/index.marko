@@ -1,0 +1,22 @@
+$ var matches = component.matches;
+
+style {
+	.match {
+		padding-bottom: 0.3em;
+	}
+	.upset {
+		color: #f95;
+	}
+}
+
+<div.list-matches>
+	<for(match in matches)>
+		<if(match.result.diff < -10)>		
+			<div.match.upset on-click('onMatchClick',match)> ~$&nbsp;&nbsp; ${match};</div>			
+		</if>
+		<else>
+			<div.match on-click('onMatchClick',match)> ~$&nbsp;&nbsp; ${match};</div>
+		</else>
+	</for>
+</div>
+	
