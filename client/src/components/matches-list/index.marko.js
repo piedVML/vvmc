@@ -59,7 +59,7 @@ marko_template.meta = {
     deps: [
       {
           type: "css",
-          code: ".match {\n\t\tpadding-bottom: 0.3em;\n\t}\n\t.upset {\n\t\tcolor: #f95;\n\t}",
+          code: ".match {\r\n\t\tpadding-bottom: 0.3em;\r\n\t}\r\n\t.upset {\r\n\t\tcolor: #f95;\r\n\t}",
           virtualPath: "./index.marko.css",
           path: "./index.marko"
         },

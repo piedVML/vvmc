@@ -49,7 +49,7 @@ marko_template.meta = {
     deps: [
       {
           type: "css",
-          code: "th {\n\t\ttext-align: left;\n\t\tborder: solid 1px;\n\t}\n\t\n\ttd {\n\t\tmin-width: 5em;\n\t\tborder: solid 1px;\n\t}\n\t\n\ttable {\n\t\tborder: solid 1px;\n\t}",
+          code: "th {\r\n\t\ttext-align: left;\r\n\t\tborder: solid 1px;\r\n\t}\r\n\t\r\n\ttd {\r\n\t\tmin-width: 5em;\r\n\t\tborder: solid 1px;\r\n\t}\r\n\t\r\n\ttable {\r\n\t\tborder: solid 1px;\r\n\t}",
           virtualPath: "./index.marko.css",
           path: "./index.marko"
         },

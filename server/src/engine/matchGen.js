@@ -211,7 +211,8 @@ var matchResolver = function (home,away) {
         regularTime: rT,
         extraTime: eT,
         shootout: shootout,
-        winner: winner
+        winner: winner,
+        diff: winner.totalCoeff-loser.totalCoeff
     }
 }
 

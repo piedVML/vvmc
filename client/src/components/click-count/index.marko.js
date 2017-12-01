@@ -45,7 +45,7 @@ marko_template.meta = {
     deps: [
       {
           type: "css",
-          code: ".count {\n    color:#70b;\n    font-size:3em;\n  }\n  .example-button {\n    font-size:1em;\n    padding:0.5em;\n  }",
+          code: ".count {\r\n    color:#70b;\r\n    font-size:3em;\r\n  }\r\n  .example-button {\r\n    font-size:1em;\r\n    padding:0.5em;\r\n  }",
           virtualPath: "./index.marko.css",
           path: "./index.marko"
         },
