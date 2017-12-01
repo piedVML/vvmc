@@ -1,0 +1,55 @@
+$ let match = input.match;
+$ let result = match.result;
+$ let home = match.home;
+$ let away = match.away;
+$ let upset = match.result ? match.result.diff < 10 : false;
+
+style {
+	.winner {
+		color: #f00;
+	}
+  .result {
+    margin: 0 0.3em;
+  }
+  .result-extra {
+    font-size: 0.75em;
+    padding-right: 0.3em;
+  }
+	.upset {
+		color: #f95;
+	}
+}
+
+if(!result)
+  span.result -- - 
+else
+  if(upset)
+    span.upset
+  if(result.winner === home)
+    if(!result.extraTime)
+      span 
+        span.club.winner -- ${home.name}
+        span.result -- ${result.regularTime.homeScore} - ${result.regularTime.awayScore}
+        span.club -- ${away.name}
+    else
+      span 
+        span.club.winner -- ${home.name}
+        span.result -- ${result.regularTime.homeScore + result.extraTime.homeScore} - ${result.regularTime.awayScore + result.extraTime.awayScore}
+        span.result-extra -- (${result.regularTime.homeScore} - ${result.regularTime.awayScore} temps réglemenatire)
+        if(result.shootout)
+          span.result -- (${result.shootout.homeScore} - ${result.shootout.awayScore} tab)
+        span.club -- ${away.name}
+  else
+    if(!result.extraTime)
+      span 
+        span.club -- ${home.name}
+        span.result -- ${result.regularTime.homeScore} - ${result.regularTime.awayScore}
+        span.club.winner -- ${away.name}
+    else
+      span 
+        span.club -- ${home.name}
+        span.result -- ${result.regularTime.homeScore + result.extraTime.homeScore} - ${result.regularTime.awayScore + result.extraTime.awayScore}
+        span.result-extra -- (${result.regularTime.homeScore} - ${result.regularTime.awayScore} temps réglemenatire)
+        if(result.shootout)
+          span.result -- (${result.shootout.homeScore} - ${result.shootout.awayScore} tab)
+        span.club.winner -- ${away.name}
